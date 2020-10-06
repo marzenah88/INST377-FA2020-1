@@ -48,7 +48,7 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-inline-start: 2;
+    padding-inline-start: 0;
     font-size: 15px;
     font-weight: bold;
   }
