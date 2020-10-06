@@ -43,10 +43,7 @@ body {
     justify-content: flex-start;
     align-items: center;
   }
-  .flex-outer li label {
-    flex: 1 0 125px;
-    
-  }
+
   .flex-inner {
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +51,9 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-inline-start: 2 ;
+    padding-inline-start: 2;
+    font-size: 15px;
+    font-weight: bold;
   }
   .flex-outer li input:not([type="checkbox"]),
   .flex-outer li textarea {
@@ -71,7 +70,7 @@ body {
     font-weight: bold;
     padding: 8px;
   }
-    
+      
    .flex-outer button {
     text-transform: uppercase;
     font-weight: bold;
