@@ -31,7 +31,9 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 0 16px;
+
   }
   .flex-inner li {
     width: 80px;
