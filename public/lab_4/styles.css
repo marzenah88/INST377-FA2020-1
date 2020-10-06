@@ -36,7 +36,7 @@ body {
   .flex-inner li {
     width: 80px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: flex-start;
   }
