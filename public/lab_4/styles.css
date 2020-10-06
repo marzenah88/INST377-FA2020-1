@@ -69,6 +69,10 @@ body {
     font-weight: bold;
     padding: 8px;
   }
+  
+  .flex-inner li [type="checkbox"] {
+    padding: 8px;
+  }
   .flex-outer button {
     text-transform: uppercase;
     font-weight: bold;
