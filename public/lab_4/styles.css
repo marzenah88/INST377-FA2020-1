@@ -3,7 +3,6 @@
 body {  
     background: #4b7ff0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
   }
   .container{
     min-width: 160px;
@@ -33,7 +32,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 16px;
-
   }
   .flex-inner li {
     width: 80px;
@@ -43,7 +41,6 @@ body {
     justify-content: flex-start;
     align-items: center;
   }
-
   .flex-inner {
     display: flex;
     flex-wrap: wrap;
@@ -70,8 +67,7 @@ body {
     font-weight: bold;
     padding: 8px;
   }
-      
-   .flex-outer button {
+    .flex-outer button {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1.2px;
@@ -81,5 +77,4 @@ body {
     border-radius: 3px;
     background-color: lime;
     border-color: rgb(0, 0, 0);
-    
   }
