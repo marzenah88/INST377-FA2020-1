@@ -45,7 +45,7 @@ body {
   }
   .flex-outer li label {
     flex: 1 0 125px;
-    max-width: 225px;
+    
   }
   .flex-inner {
     display: flex;
@@ -64,20 +64,15 @@ body {
     padding: 5px 0;
   }
   
-  .flex-outer li p {
+  .flex-outer li p, .flex-outer li label:not([type="for-checkbox" ]) {
     flex: 1 0 125px;
     max-width: 225px;
-  }
-  label, p {
     font-size: 15px;
     font-weight: bold;
     padding: 8px;
   }
-  
- /* .flex-inner li [type="checkbox"] {
-    padding: 8px;
-  }*/
-  .flex-outer button {
+    
+   .flex-outer button {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1.2px;
