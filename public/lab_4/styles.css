@@ -48,10 +48,12 @@ body {
     flex: 1 0 225px;
     align-items: center;
     flex-direction: row;
+    max-width: 500px;
     justify-content: space-between;
     padding-inline-start: 0;
     font-size: 15px;
     font-weight: bold;
+    padding: 5px 0;
   }
   .flex-outer li input:not([type="checkbox"]),
   .flex-outer li textarea {
