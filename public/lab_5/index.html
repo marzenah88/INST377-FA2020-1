@@ -56,14 +56,14 @@
     </div>
     <script>
       function testFunction() {
-        const FormName = document.querySelector(".form-title")
+        
         fetch('/api')
         .then((response) => response.text())
         .then((response) => {
-          console.log(response)
+          console.log(response);
         })
         .then((response) => {
-          FormName.innerHTML = (response)
+          const FormName = (response);
         })
       }
       
