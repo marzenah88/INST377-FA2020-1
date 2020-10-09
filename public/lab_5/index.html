@@ -65,7 +65,7 @@
             n.innerText = (response);
           })
         })
-        document.getSelection('body').styleSheets.style.background = 'red';
+        document.styleSheets[0].find(n === body).style.background = 'red';
 
       }
       
