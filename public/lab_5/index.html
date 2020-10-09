@@ -66,9 +66,14 @@
           })
         })
         document.body.style.background = '#C221AA';
-        document.querySelector('.flex-outer').style.margin = '0 auto';
+        
       }
-      
+      document.querySelector('.flex-outer').style.margin = '0 auto';
+      const Boxes = document.querySelectorAll('flex-outer li input', '.flex-outer li textarea')
+      Boxes.forEach((el) {
+        el.style.border.radius = "3px";
+        el.border.color = 'rgb(0, 0, 0)';
+      })
     </script>
   </body>
 </html>
