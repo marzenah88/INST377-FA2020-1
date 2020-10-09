@@ -62,9 +62,11 @@
         .then((response) => {
           console.log(response)
           titles.forEach((n) => {
-            n = (response)
+            n.innerText = (response);
           })
         })
+        document.querySelectorAll('body').style.backgroundColor = '#FF00FF';
+
       }
       
     </script>
