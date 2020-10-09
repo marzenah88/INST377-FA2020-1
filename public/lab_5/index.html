@@ -60,7 +60,7 @@
         fetch('/api')
         .then((response) => response.text())
         .then((response) => {
-          FormName.innerHTML = response.text()
+          FormName.innerHTML = (response)
           console.log(response)
         })
       }
