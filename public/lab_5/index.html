@@ -56,22 +56,14 @@
     </div>
     <script>
       function testFunction() {
-        const formHeader = document.querySelector(".form-title");
         fetch('/api')
         .then((response) => response.text())
         .then((response) => {
-          formHeader.innerHTML = response;
+          console.log(response)
+          document.querySelector(".form-title") = response
         })
-        .then((response) => {
-          console.log(response);
-        })
-
       }
-     /* function clickMe() {
-        const FormTitle = document.querySelector('.form-title');
-        console.log(FormTitle);
-        FormTitle.innerHTML = "M Hurtado";
-      }*/
+    
     </script>
   </body>
 </html>
