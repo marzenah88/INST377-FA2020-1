@@ -83,6 +83,6 @@ body {
     border-color: rgb(0, 0, 0);
   }
   .buttons-area {
-    flex: 1 0 225px;
+    flex: 0 1 225px;
     justify-content: flex-start;
   }
