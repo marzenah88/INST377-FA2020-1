@@ -60,11 +60,13 @@
         fetch('/api')
         .then((response) => response.text())
         .then((response) => {
-          FormName.innerHTML = (response)
           console.log(response)
         })
+        .then((response) => {
+          FormName.innerHTML = (response)
+        })
       }
-    
+      
     </script>
   </body>
 </html>
