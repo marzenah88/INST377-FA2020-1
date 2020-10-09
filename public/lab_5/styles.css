@@ -82,3 +82,9 @@ body {
     background-color: lime;
     border-color: rgb(0, 0, 0);
   }
+  .buttons-area {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
