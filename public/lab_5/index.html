@@ -60,7 +60,7 @@
         .then((response) => response.text())
         .then((response) => {
           console.log(response)
-          document.querySelector(".form-title") = response
+          document.querySelector(".form-title").innerHTML = response
         })
       }
     
