@@ -30,7 +30,6 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     padding: 0 16px;
   }
   .flex-inner li {
@@ -77,7 +76,7 @@ body {
     margin-bottom: 25px;
     margin-top: 15px;
     margin-right: 10px;
-    padding: 6x 12px;
+    padding: 6px 12px;
     border-radius: 3px;
     background-color: lime;
     border-color: rgb(0, 0, 0);
