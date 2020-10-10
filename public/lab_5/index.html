@@ -69,11 +69,19 @@
         
       }
       document.querySelector('.flex-outer li').style.margin = '0 auto';
-      const Boxes = document.querySelectorAll('flex-outer li input', '.flex-outer li textarea')
+      const Boxes = document.querySelectorAll('flex-outer li input', '.flex-outer li textarea');
       Boxes.forEach((el) => {
         el.style.border.radius = "3px";
         el.border.color = '#404E61';
       })
+       function fruitLabels() {
+         const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
+         const ageLabels = document.querySelectorAll('#checkbox.label');
+         ageLabel.forEach((el, i) => {
+           const name = el.innerText;
+           console.log(name);
+           el.innerText = fruits[i];
+         })
     </script>
   </body>
 </html>
