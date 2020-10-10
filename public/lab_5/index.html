@@ -70,13 +70,12 @@
       
       const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
       const ageLabels = document.querySelectorAll('.flex-inner li label');
-      ageLabels = ageLabels.text();
       ageLabels.forEach((el, index) => {
-         el.innerText = fruits[i];
+         el.innerHtml = fruits[index];
       })
        
       /* setting up borders for input boxes */
-        const Boxes = document.querySelectorAll('.flex-outer li input', '.flex-outer li textarea');
+        const Boxes = document.querySelectorAll('.flex-outer li input' || '.flex-outer li textarea');
         Boxes.forEach((el) => {
           el.style.border.radius = "3px";
           el.border.color = '#404E61';
@@ -85,7 +84,7 @@
       /* centerForm */
       document.querySelector('.flex-outer').style.margin = '0 auto';
       /* replace "Age" labe with "Fruits" */
-      document.querySelector('.checkbox-list-label').innerText = "Fruits";
+      document.querySelector('.checkbox-list-label').innerHTML = "Fruits";
      
     </script>
   </body>
