@@ -63,7 +63,7 @@
     flex: 1 0 225px;
     max-width: 500px;
     padding: 5px 0;
-    border: 3px;
+    border-radius: 3px;
     border-color:'#323E4D';
   }
   
