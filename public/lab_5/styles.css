@@ -21,6 +21,7 @@
   .flex-outer {
     max-width: 800px;
     padding: 0px 16px;
+    margin-left: 15px;
     align-self: center;
   }
   .flex-outer, .flex-inner {
