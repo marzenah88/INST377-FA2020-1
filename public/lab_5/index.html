@@ -69,11 +69,9 @@
       }
       
       const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
-      const ageLabels = document.querySelectorAll('#checkbox.label');
-      ageLabel.forEach((el, i) => {
-        const name = el.innerText;
-        console.log(name);
-        el.innerText = fruits[i];
+      const ageLabels = document.querySelectorAll('#checkbox label');
+      ageLabel.forEach((el, index) => {
+         el.innerText = fruits[i];
       })
        
       /* setting up borders for input boxes */
@@ -85,7 +83,8 @@
         
       /* centerForm */
       document.querySelector('.flex-outer').style.margin = '0 auto';
-
+      /* replace "Age" labe with "Fruits" */
+      document.querySelector('checkbox-list-label').innerText = "Fruits";
      
     </script>
   </body>
