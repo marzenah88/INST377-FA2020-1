@@ -6,8 +6,9 @@
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <h1 class="ftitle">Marzena Hurtado's Lab 4</h1>
-    <div class="container">
+    <div class="container"></div>
+      <h1 class="ftitle">Marzena Hurtado's Lab 4</h1>
+    
       <form action="/api" method="post">
         <ul class="flex-outer">
           <li>
@@ -69,9 +70,10 @@
       }
       
       const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
-      const ageLabels = document.querySelectorAll('.flex-inner li label');
-      ageLabels.forEach((el, index) => {
-         el = fruits[index];
+      const checkBoxLabes = document.querySelectorAll('.flex-inner li label');
+      index = 1;
+      checkBoxLabels.forEach((el, index) => {
+         el.innerText = fruits[index];
          index += 1;
       })
        
