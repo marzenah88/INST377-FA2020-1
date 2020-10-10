@@ -68,30 +68,25 @@
         document.body.style.background = '#C221AA';
       }
       
-       function fruitLabels() {
-         const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
-         const ageLabels = document.querySelectorAll('#checkbox.label');
-         ageLabel.forEach((el, i) => {
-           const name = el.innerText;
-           console.log(name);
-           el.innerText = fruits[i];
-         })
-        }
-        function inputBoxBorders() {
-          const Boxes = document.querySelectorAll('flex-outer li input', '.flex-outer li textarea');
-          Boxes.forEach((el) => {
-            el.style.border.radius = "3px";
-            el.border.color = '#404E61';
-         })
+      const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
+      const ageLabels = document.querySelectorAll('#checkbox.label');
+      ageLabel.forEach((el, i) => {
+        const name = el.innerText;
+        console.log(name);
+        el.innerText = fruits[i];
+      })
+       
+      /* setting up borders for input boxes */
+        const Boxes = document.querySelectorAll('flex-outer li input', '.flex-outer li textarea');
+        Boxes.forEach((el) => {
+          el.style.border.radius = "3px";
+          el.border.color = '#404E61';
+        })
         } 
-        /* centerForm */
-        document.querySelector('.flex-outer li').style.margin = '0 auto';
+      /* centerForm */
+      document.querySelector('.flex-outer').style.margin = '0 auto';
 
-        /*set up borders for input boxes */
-        document.inputBoxBorders();
-
-        /* replase labels for checkboxes with fruit names */
-        document.fruitLabels();
+     
     </script>
   </body>
 </html>
