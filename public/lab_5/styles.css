@@ -64,7 +64,7 @@
     max-width: 500px;
     padding: 5px 0;
     border-radius: 2px;
-    border-color:'#323E4D';
+    border-color:'#515470';
   }
   
   .checkbox-list-label, .flex-outer li label:not([type="for-checkbox" ]) {
