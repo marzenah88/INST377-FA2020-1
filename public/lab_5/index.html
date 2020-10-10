@@ -67,16 +67,16 @@
           })
         })
         document.body.style.background = '#C221AA';
+        const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
+        const checkBoxLabels = document.querySelectorAll('.flex-inner li label');
+        index = 1;
+        checkBoxLabels.forEach((el, index) => {
+          el.innerText = fruits[index];
+          index += 1;
+        })
       }
       
-      const fruits = ['kiwi', 'dragonfruit', 'pomelo'];
-      const checkBoxLabels = document.querySelectorAll('.flex-inner li label');
-      index = 1;
-      checkBoxLabels.forEach((el, index) => {
-         el.innerText = fruits[index];
-         index += 1;
-      })
-       
+            
       /* setting up borders for input boxes */
         const inputBoxes = document.querySelectorAll('.flex-outer li input, .flex-outer li textarea');
         inputBoxes.forEach((el) => {
@@ -87,6 +87,10 @@
       /* centerForm */
       const flexOuter = document.querySelector('.flex-outer');
       flexOuter.style.margin = '0 auto';
+      flexOuter.style.width = '100%';
+      const cont = document.querySelector('.container');
+      cont.style.align-self = "center";
+
       /* replace "Age" labe with "Fruits" */
       const fruitLabel = document.querySelector('.checkbox-list-label');
       fruitLabel.innerText = "Fruits";
