@@ -19,7 +19,7 @@
     padding-top: 25px;
   }
   .flex-outer {
-    max-width: 750px;
+    max-width: 820px;
     padding: 0px 15px;
     margin-left: 15px;
     align-self: center;
@@ -63,7 +63,7 @@
     flex: 1 0 225px;
     max-width: 500px;
     padding: 5px 0;
-    border-radius: 3px;
+    border-radius: 2px;
     border-color:'#323E4D';
   }
   
