@@ -63,13 +63,13 @@
     flex: 1 0 225px;
     max-width: 500px;
     padding: 5px 0;
-    border-radius: "3px";
+    border: 3px;
     border-color:'#323E4D';
   }
   
   .checkbox-list-label, .flex-outer li label:not([type="for-checkbox" ]) {
     flex: 1 0 125px;
-    max-width: 215px;
+    max-width: 225px;
     font-size: 15px;
     font-weight: bold;
     padding: 8px;
