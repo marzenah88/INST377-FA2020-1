@@ -34,7 +34,7 @@ document.body.addEventListener('submit', async (e) => {
     body: JSON.stringify(form)
   })
   
-  .then((fromServer) => fromServer.json())
+  .then((fromServer) => fromServer.json());
   .then((fromServer) => {
     // You're going to do your lab work in here. Replace this comment.
     const names = countries.map(country => `${country.name}`);
@@ -57,5 +57,5 @@ document.body.addEventListener('submit', async (e) => {
     console.log(names);
     console.log('fromServer', fromServer);
   });  
-  .catch((err) => console.log(err));
+ // .catch((err) => console.log(err));
 });
