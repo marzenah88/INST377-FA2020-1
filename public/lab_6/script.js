@@ -1,5 +1,7 @@
 // You may wish to find an effective randomizer function on MDN.
 
+const { default: countries } = require("./countries");
+
 function range(int) {
   const arr = [];
   for (let i = 0; i < int; i += 1) {
@@ -30,7 +32,24 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // You're going to do your lab work in here. Replace this comment.
+      const names = countries.map(country => `${country.name}`);
+      console.log(names);
+
+      // random integer between min(inclusive) and max(not inclusive).
+      function randomIndex(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      const indexes = [];
+      while (indexes.length < 10) {
+        let num = randomIndex(0, countires.length - 1);
+        if (indexes.includes(num)) continue;
+        else (indexes += num);
+      const arr = [];
+      indexes.forEach(index => {
+        arr += names[index]
+      });
+      console.log(arr);
       console.log('fromServer', fromServer);
-    })
+    });
     .catch((err) => console.log(err));
 });
