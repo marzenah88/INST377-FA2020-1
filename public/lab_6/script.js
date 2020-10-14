@@ -49,8 +49,10 @@ document.body.addEventListener('submit', async (e) => {
         arr += names[index]
       });
       console.log(arr);
-      const sortedSet = names.sort
-
+      const sortedSet = names.sort((last, next) => {
+        return last < next ? 1 : -1;
+      });
+      console.log(names);
 
 
       console.log('fromServer', fromServer);
