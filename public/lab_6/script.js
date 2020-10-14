@@ -47,7 +47,8 @@ document.body.addEventListener('submit', async (e) => {
       const arr = [];
       indexes.forEach(index => {
         arr += names[index]
-    });
+      }
+    };
     console.log(arr);
     const sortedSet = names.sort((last, next) => {
         return last < next ? 1 : -1;
