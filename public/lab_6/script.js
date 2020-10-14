@@ -49,7 +49,14 @@ document.body.addEventListener('submit', async (e) => {
         arr += names[index]
       });
       console.log(arr);
+      const sortedSet = names.sort
+
+
+
       console.log('fromServer', fromServer);
+      
+
+
     });
     .catch((err) => console.log(err));
 });
