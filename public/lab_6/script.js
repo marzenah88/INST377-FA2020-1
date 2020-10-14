@@ -29,36 +29,33 @@ document.body.addEventListener('submit', async (e) => {
     },
     body: JSON.stringify(form)
   })
-    .then((fromServer) => fromServer.json())
-    .then((fromServer) => {
-      // You're going to do your lab work in here. Replace this comment.
-      const names = countries.map(country => `${country.name}`);
-      console.log(names);
+  .then((fromServer) => fromServer.json())
+  .then((fromServer) => {
+    // You're going to do your lab work in here. Replace this comment.
+    const names = countries.map(country => `${country.name}`);
+    console.log(names);
 
-      // random integer between min(inclusive) and max(not inclusive).
-      function randomIndex(min, max) {
+    // random integer between min(inclusive) and max(not inclusive).
+    function randomIndex(min, max) {
         return Math.random() * (max - min) + min;
-      }
-      const indexes = [];
-      while (indexes.length < 10) {
-        let num = randomIndex(0, countires.length - 1);
-        if (indexes.includes(num)) continue;
-        else (indexes += num);
+    }
+    const indexes = [];
+    while (indexes.length < 10) {
+      let num = randomIndex(0, countires.length - 1);
+      if (indexes.includes(num)) continue;
+      else (indexes += num);
       const arr = [];
       indexes.forEach(index => {
         arr += names[index]
-      });
-      console.log(arr);
-      const sortedSet = names.sort((last, next) => {
-        return last < next ? 1 : -1;
-      });
-      console.log(names);
-
-
-      console.log('fromServer', fromServer);
-      
-
-
     });
+    console.log(arr);
+    const sortedSet = names.sort((last, next) => {
+        return last < next ? 1 : -1;
+    });
+    console.log(names);
+    console.log('fromServer', fromServer);
+  });  
+});
+
     .catch((err) => console.log(err));
 });
