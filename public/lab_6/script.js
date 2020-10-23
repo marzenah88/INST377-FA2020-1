@@ -25,7 +25,7 @@ function arrOfUniqueRandInt (maxVal, arrSize) {
   while (n < arrSize) {
     const num = getRandomInt(maxVal);
     if (!uniqueArr.includes(num)) {
-      uniqueArr.append(num);
+      uniqueArr.push(num);
       n += 1;
     } 
   }
