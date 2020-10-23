@@ -22,7 +22,6 @@ function getRandomInt(max) {
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
-
   fetch('/api', {
     method: 'POST',
     headers: {
@@ -30,33 +29,31 @@ document.body.addEventListener('submit', async (e) => {
     },
     body: JSON.stringify(form)
   })
-
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // You're going to do your lab work in here. Replace this comment.
-      console.log('fromServer');
+      console.log('fromServer', fromServer);
       if (document.querySelector('.flex-inner')) {
         document.querySelector('.flex-inner').remove();
       }
       const arr1 = range(10);
-      dataLength = fromServer.length;
+      const dataLength = fromServer.length;
       const arrOf10 = arr1.map(() => {
         const index = getRandomInt(dataLength);
         return fromServer[index];
       });
 
       const inputList = arrOf10.sort((a, b) => sortFunction(a, b, 'name'));
-      const ordered_list = document.createElement('ol');
-      ordered_list.className = 'flex-inner';
-      $('form').prepend(ordered_list);
+      const selected = document.createElement('ol');
+      selected.className = 'flex-inner';
+      $('form').prepend(selected);
 
       inputList.forEach((el, i) => {
-        const country = document.createElement('li');
-        $(country).append(`<input type='checkbox' value=${el.code} />`);
-        $(country).append(`<label for=${el.code}> ${el.name} < </label>`);
-        $(orderedList).append(country);
+        const li = document.createElement('li');
+        $(li).append(`<input type='checkbox' value=${el.code} />`);
+        $(li).append(`<label for=${el.code}>${el.name}</label>`);
+        $('form').append(li);
       });
     })
-
     .catch((err) => console.log(err));
 });
