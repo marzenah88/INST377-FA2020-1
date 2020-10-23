@@ -19,7 +19,6 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
@@ -41,7 +40,7 @@ document.body.addEventListener('submit', async (e) => {
       }
       const arr1 = range(10);
       dataLength = fromServer.length;
-      const arrOf10 = arr1.map((i) => {
+      const arrOf10 = arr1.map(() => {
         const index = getRandomInt(dataLength);
         return fromServer[index];
       });
