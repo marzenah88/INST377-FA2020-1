@@ -45,7 +45,7 @@ document.body.addEventListener('submit', async (e) => {
 
       const inputList = arrOf10.sort((a, b) => sortFunction(b, a, 'name'));
       const selected = document.createElement('ol');
-      selected.className = 'flex-inner';
+      selected.className = '.flex-inner';
       $('form').prepend(selected);
 
       inputList.forEach((el, i) => {
