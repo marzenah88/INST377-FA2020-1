@@ -18,10 +18,6 @@ function sortFunction(a, b, key) {
   }
   return 0;
 }
-// random integer between min(inclusive) and max(not inclusive).
-function randomIndex(min, max) {
-  return Math.random() * (max - min) + min;
-}
 
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
@@ -37,25 +33,29 @@ document.body.addEventListener('submit', async (e) => {
   .then((fromServer) => fromServer.json());
   .then((fromServer) => {
     // You're going to do your lab work in here. Replace this comment.
-    const names = countries.map(country => `${country.name}`);
-    console.log(names);
-
-    const indexes = [];
-    while (indexes.length < 10) {
-      let num = randomIndex(0, countires.length - 1);
-      if (indexes.includes(num)) continue;
-      else (indexes += num);
-      const arr = [];
-      indexes.forEach(index => {
-        arr += names[index]
-      });
-    };
-    console.log(arr);
-    const sortedSet = names.sort((last, next) => {
-        return last < next ? 1 : -1;
+    console.log('fromServer');
+    if (document.querySelector('.flex-inner')) {
+      document.querySelector('.flex-inner').remove();
+    }
+    const arr1 = range(10);
+    dataLength = fromServer.length;
+    const arrOf10 = arr1.map( i => {
+      const index = getRandomIntInclusive(dataLength);
+      return fromServer[index];
     });
-    console.log(names);
-    console.log('fromServer', fromServer);
-  });  
- // .catch((err) => console.log(err));
+
+    const inputList = arrOf10.sort((a, b) => sortFunction(a,b,'name'));
+    const ordered_list = document.createElement('ol');
+    ordered_list.className = 'flex-inner';
+    $('form').prepend(ordered_list);
+
+    inputList.forEach((el,i) => {
+      const country = document.createElement('li');
+      $(country).append(`<input type='checkbox' value=${el.code} />`);
+      $(country).append(`<label for=${el.code}> ${el.name} < </label>`);
+      $(orderedList).append(country)
+    });
+  })
+
+  .catch((err) => console.log(err));
 });
