@@ -51,8 +51,7 @@ document.body.addEventListener('submit', async (e) => {
       //const arr1 = range(10);
       const dataLength = fromServer.length;
       const arrIndexes = arrOfUniqueRandInt(dataLength, 10)
-      const arrOf10 = arrIndexes.map((i) => {
-        let index = arrayIndexes[i];
+      const arrOf10 = arrIndexes.map(function(num) => {
         return fromServer[index];
       });
 
