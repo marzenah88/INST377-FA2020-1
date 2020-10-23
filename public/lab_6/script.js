@@ -1,6 +1,3 @@
-// You may wish to find an effective randomizer function on MDN.
-
-//const { default: countries } = require("./countries");
 
 function range(int) {
   const arr = [];
@@ -22,6 +19,7 @@ function sortFunction(a, b, key) {
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
   const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
+  
   fetch('/api', {
     method: 'POST',
     headers: {
@@ -30,32 +28,33 @@ document.body.addEventListener('submit', async (e) => {
     body: JSON.stringify(form)
   })
   
-  .then((fromServer) => fromServer.json())
-  .then((fromServer) => {
-    // You're going to do your lab work in here. Replace this comment.
-    console.log('fromServer');
-    if (document.querySelector('.flex-inner')) {
-      document.querySelector('.flex-inner').remove();
-    }
-    const arr1 = range(10);
-    dataLength = fromServer.length;
-    const arrOf10 = arr1.map( i => {
-      const index = getRandomIntInclusive(dataLength);
-      return fromServer[index];
-    });
+    .then((fromServer) => fromServer.json())
+    .then((fromServer) => {
+      // You're going to do your lab work in here. Replace this comment.
+      console.log('fromServer');
+      if (document.querySelector('.flex-inner')) {
+        document.querySelector('.flex-inner').remove();
+      }
+      const arr1 = range(10);
+      dataLength = fromServer.length;
+      const arrOf10 = arr1.map( i => {
+        const index = getRandomIntInclusive(dataLength);
+        return fromServer[index];
+      });
 
-    const inputList = arrOf10.sort((a, b) => sortFunction(a,b,'name'));
-    const ordered_list = document.createElement('ol');
-    ordered_list.className = 'flex-inner';
-    $('form').prepend(ordered_list);
+      const inputList = arrOf10.sort((a, b) => sortFunction(a,b,'name'));
+      const ordered_list = document.createElement('ol');
+      ordered_list.className = 'flex-inner';
+      $('form').prepend(ordered_list);
 
-    inputList.forEach((el,i) => {
-      const country = document.createElement('li');
-      $(country).append(`<input type='checkbox' value=${el.code} />`);
-      $(country).append(`<label for=${el.code}> ${el.name} < </label>`);
-      $(orderedList).append(country)
-    });
-  })
+      inputList.forEach((el,i) => {
+        const country = document.createElement('li');
+        $(country).append(`<input type='checkbox' value=${el.code} />`);
+        $(country).append(`<label for=${el.code}> ${el.name} < </label>`);
+        $(orderedList).append(country)
+      });
+    })
 
   .catch((err) => console.log(err));
+  
 });
