@@ -18,6 +18,17 @@ function sortFunction(a, b, key) {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
+// custom function that generates an array of random unique integers between 0 and given maxValue
+function arrOfUniqueRandInt (maxVal, arrSize) {
+  const uniqueArr = []
+  let n = 0
+  while (n < arrSize){
+    let num = getRandomInt(maxVal);
+    if (!uniqueArr.includes(num)) {
+      uniqueArr.append(num);
+      n +=1
+  }
+}
 
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
@@ -36,10 +47,11 @@ document.body.addEventListener('submit', async (e) => {
       if (document.querySelector('.flex-inner')) {
         document.querySelector('.flex-inner').remove();
       }
-      const arr1 = range(10);
+      //const arr1 = range(10);
       const dataLength = fromServer.length;
-      const arrOf10 = arr1.map(() => {
-        const index = getRandomInt(dataLength);
+      const arrIndexes = arrOfUniqueRandInt(dataLength, 10)
+      const arrOf10 = arrIndexes.map((i) => {
+        let index = arrayIndexes[i];
         return fromServer[index];
       });
 
