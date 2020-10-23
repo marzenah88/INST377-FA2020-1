@@ -50,10 +50,10 @@ document.body.addEventListener('submit', async (e) => {
       }
       //const arr1 = range(10);
       const dataLength = fromServer.length;
-      const arrIndexes = arrOfUniqueRandInt(dataLength, 10)
-      const arrOf10 = arrIndexes.map(function(num) => {
-        return fromServer[index];
-      });
+      const arrIndexes = arrOfUniqueRandInt(dataLength, 10);
+      const arrOf10 = arrIndexes.map(num => {
+        return fromServer[num];
+      })
 
       const inputList = arrOf10.sort((a, b) => sortFunction(b, a, 'name'));
       const selected = document.createElement('ol');
@@ -66,6 +66,7 @@ document.body.addEventListener('submit', async (e) => {
         $(li).append(`<label for=${el.code}>${el.name}</label>`);
         $(selected).append(li);
       });
-    })
+    });
+    
     .catch((err) => console.log(err));
 });
