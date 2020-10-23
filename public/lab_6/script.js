@@ -52,7 +52,7 @@ document.body.addEventListener('submit', async (e) => {
         const li = document.createElement('li');
         $(li).append(`<input type='checkbox' id= ${el.code} value=${el.code} />`);
         $(li).append(`<label for=${el.code}>${el.name}</label>`);
-        $('form').append(li);
+        $('form').append(selected);
       });
     })
     .catch((err) => console.log(err));
