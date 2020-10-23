@@ -23,10 +23,10 @@ function arrOfUniqueRandInt (maxVal, arrSize) {
   const uniqueArr = [];
   let n = 0;
   while (n < arrSize) {
-    let num = getRandomInt(maxVal);
+    const num = getRandomInt(maxVal);
     if (!uniqueArr.includes(num)) {
       uniqueArr.append(num);
-      n +=1;
+      n += 1;
     } 
   }
 }
