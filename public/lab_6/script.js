@@ -20,13 +20,14 @@ function getRandomInt(max) {
 }
 // custom function that generates an array of random unique integers between 0 and given maxValue
 function arrOfUniqueRandInt (maxVal, arrSize) {
-  const uniqueArr = []
-  let n = 0
-  while (n < arrSize){
+  const uniqueArr = [];
+  let n = 0;
+  while (n < arrSize) {
     let num = getRandomInt(maxVal);
     if (!uniqueArr.includes(num)) {
       uniqueArr.append(num);
-      n +=1
+      n +=1;
+    } 
   }
 }
 
