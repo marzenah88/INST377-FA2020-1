@@ -18,18 +18,6 @@ function sortFunction(a, b, key) {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-// custom function that generates an array of random unique integers between 0 and given maxValue
-function arrOfUniqueRandInt (maxVal, arrSize) {
-  const uniqueArr = [];
-  let n = 0;
-  while (n < arrSize) {
-    const num = getRandomInt(maxVal);
-    if (!uniqueArr.includes(num)) {
-      uniqueArr.push(num);
-      n += 1;
-    } 
-  }
-}
 
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); // this stops whatever the browser wanted to do itself.
@@ -50,8 +38,16 @@ document.body.addEventListener('submit', async (e) => {
         document.querySelector('.flex-inner').remove();
       }
       const dataLength = fromServer.length;
-      const arrIndexes = arrOfUniqueRandInt(dataLength, 10);
-      const arrOf10 = arrIndexes.map(num => (fromServer[num]));
+      const countries = range(10);
+      const indexes = range(10)
+      const arrOf10 = countries.map(() => {
+        let num = 0;
+        do {
+          num = getRandomInt(dataLength);
+        } while (num in indexes);
+        indexes.push(num);
+        return fromServer[num];
+      });
       const inputList = arrOf10.sort((a, b) => sortFunction(b, a, 'name'));
       const selected = document.createElement('ol');
       selected.className = 'flex-inner';
