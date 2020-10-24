@@ -43,30 +43,25 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
-      // You're going to do your lab work in here. Replace this comment.
+      // You're going to do your lab work in here. Replace this comment
       console.log('fromServer', fromServer);
-      if (document.querySelector('.flex-inner')) {
+
+      if (document.querySelector('.flex-inner')) { 
         document.querySelector('.flex-inner').remove();
       }
-      //const arr1 = range(10);
       const dataLength = fromServer.length;
       const arrIndexes = arrOfUniqueRandInt(dataLength, 10);
-      const arrOf10 = arrIndexes.map(num => {
-        return fromServer[num];
-      })
-
+      const arrOf10 = arrIndexes.map(num => (fromServer[num]));
       const inputList = arrOf10.sort((a, b) => sortFunction(b, a, 'name'));
       const selected = document.createElement('ol');
       selected.className = 'flex-inner';
       $('form').prepend(selected);
 
-      inputList.forEach((el, i) => {
+      inputList.forEach(el => {
         const li = document.createElement('li');
         $(li).append(`<input type='checkbox' id= ${el.code} value=${el.code} />`);
         $(li).append(`<label for=${el.code}>${el.name}</label>`);
         $(selected).append(li);
       });
-    });
-    
-    .catch((err) => console.log(err));
+    }).catch((err) => console.log(err));
 });
