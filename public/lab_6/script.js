@@ -50,7 +50,8 @@ document.body.addEventListener('submit', async (e) => {
       selected.className = 'flex-inner';
       $('form').prepend(selected);
 
-      const inputList = arrOf10.sort((a, b) => sortFunction(a, b, 'name').reverse());
+      const inputList = arrOf10.sort((a, b) => sortFunction(a, b, 'name'));
+      inputList.reverse();
       inputList.forEach(el => {
         const li = document.createElement('li');
         $(li).append(`<input type='checkbox' id= ${el.code} value=${el.code} />`);
