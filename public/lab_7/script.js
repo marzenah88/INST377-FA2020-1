@@ -102,8 +102,7 @@ document.body.addEventListener('submit', async (e) => {
     body: JSON.stringify(form)
   })
     .then((fromServer) => fromServer.json())
-    .then((fromServer) => console.log('fromServer', fromServer))
-    //.then((jsonFromServer) => runThisWithResultsFromServer(jsonFromServer))
+    .then((jsonFromServer) => runThisWithResultsFromServer(jsonFromServer))
     .catch((err) => {
       console.log(err);
     });
