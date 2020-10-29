@@ -9,7 +9,7 @@ function convertRestaurantsToCategories(restaurantList) {
       const nextCat = cat;
       const newCat = {y: 1, label: nextCat};
       listOfCat.push(nextCat);
-      cat_list.push(newCat);
+      return newCat;
     }
     return cat_list;
   }, []);
