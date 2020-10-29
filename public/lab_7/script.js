@@ -7,7 +7,7 @@ function convertRestaurantsToCategories(restaurantList) {
       } else {
       const newCat = {y: 1, label: restaurant.category}
       return newCat;
-    }
+    });
     return cat_list;
   }, []);
   console.log(categories);
