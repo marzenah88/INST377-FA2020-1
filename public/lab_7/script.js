@@ -1,11 +1,16 @@
 function convertRestaurantsToCategories(restaurantList) {
-  const categories = restaurantList.reduce((cat_list, restaurant) => {
-    cat_list.forEach(item => {
-      if (restaurant.category === item.label) {
-        item.y += 1;
-      } else {
-        const newCat = {y: 1, label: restaurant.category};
-        return newCat;
+  const listOfCat = [];
+  listOfCat[];
+    const categories = restaurantList.reduce((cat_list, restaurant, index)  {
+    let cat = restaurant.category;
+    if (cat in listOfCat) {
+      index = listOfCat.indexOf(cat);
+      cat_list[index].y += 1;
+    } else {
+      const nextCat = cat;
+      const newCat = {y: 1, label: nextCat};
+      listOfCat.push(nextCat);
+      cat_list.push(newCat);
       }
     });
     return cat_list;
