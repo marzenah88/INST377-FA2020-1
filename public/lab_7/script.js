@@ -64,7 +64,7 @@ function runThisWithResultsFromServer(jsonFromServer) {
   // Instantiate your chart
   const reorganizedData = convertRestaurantsToCategories(jsonFromServer);
   const options = makeYourOptionsObject(reorganizedData);
-  const chartt = new CanvasJS.Chart('chartContainer', options);
+  const chart = new CanvasJS.Chart('chartContainer', options);
   chart.render();
 }
 
