@@ -1,7 +1,7 @@
 function convertRestaurantsToCategories(restaurantList) {
   const listOfCat = [];
   listOfCat[];
-    const categories = restaurantList.reduce((cat_list, restaurant, index)  {
+  const categories = restaurantList.reduce((cat_list, restaurant, index) => {
     let cat = restaurant.category;
     if (cat in listOfCat) {
       index = listOfCat.indexOf(cat);
@@ -11,8 +11,7 @@ function convertRestaurantsToCategories(restaurantList) {
       const newCat = {y: 1, label: nextCat};
       listOfCat.push(nextCat);
       cat_list.push(newCat);
-      }
-    });
+    }
     return cat_list;
   }, []);
   console.log(categories);
