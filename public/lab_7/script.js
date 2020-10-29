@@ -13,11 +13,13 @@ function convertRestaurantsToCategories(restaurantList) {
     }
     return cat_list;
   }, []);
-  a.sort((a,b)=> (a.name > b.name ? 1 : -1))
-  categories.sort((a, b) => (a.y > b.y ? 1 : -1));
-  console.log(categories);
-  return categories;
+  const list = categories.sort((a, b) => {
+    return (b.y - a.y)
+  });
+  console.log(list);
+  return list;
 }
+
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
   // set your chart configuration here!
