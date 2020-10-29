@@ -12,10 +12,12 @@ function convertRestaurantsToCategories(restaurantList) {
       counts.push(1);
     }
   });
+  console.log(counts);
+  console.log(catList);
   const result =[];
   catList.forEach (cat => {
     const count = counts[catList.indexOf(cat)]
-    console.log(count);
+   
     result.push({y: count, label: cat})
   });
   //console.log(result);
