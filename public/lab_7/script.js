@@ -42,7 +42,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       labelFontSize: 12,
       scaleBreaks:{
         type: 'wavy', 
-        customBreaks: [{startValue: 0, endValue: 50}, {startValue: 51, endValue: 100}, {startValue: 101, endValue: 150}, {startValue: 151, endValue: 200}] 
+        customBreaks: [{startValue: 0, endValue: 50}, {startValue: 51, endValue: 150}, {startValue: 151, endValue: 200}] 
       }
          // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
