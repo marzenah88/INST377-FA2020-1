@@ -1,15 +1,28 @@
+const { each } = require("cypress/types/bluebird");
+const { forEach } = require("cypress/types/lodash");
+
 function convertRestaurantsToCategories(restaurantList) {
+  
+  const counts = [];
   const catList = [];
-  const groupedByCat = restaurantList.reduce((item) => {
-    if(!(item.category in categList)) {
+  let index
+  forEach (item in restaurantList){
+    if (item.category in catList) {
+       index =  catList.indexOf(item.category);
+       counts[index] += 1;
+    } else {
       const newCat = item.category;
       catList.push(newCat);
-      groupedByCat.push({cunt: 1, category: newCat }); 
-    } else {
-      groupedByCat.count +=1;
+      counts.push(1);
     }
-  });
-  return groupedByCat;
+  }
+  const result = [];
+  forEach(cat in catList) {
+    index = catList.indexOf(cat);
+    const count = counts[index];
+    result.push({y:count, cat});
+  }
+  return result
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
