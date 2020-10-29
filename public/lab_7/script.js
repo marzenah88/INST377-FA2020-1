@@ -1,6 +1,6 @@
 function convertRestaurantsToCategories(restaurantList) {
   const catList = [];
-  const groupedByCat = restaurantList.reduce((catist, item) => {
+  const groupedByCat = restaurantList.reduce((item) => {
     if(!(item.category in categList)) {
       const newCat = item.category;
       catList.push(newCat);
@@ -70,7 +70,6 @@ document.body.addEventListener('submit', async (e) => {
     },
     body: JSON.stringify(form)
   })
-    
     .then((fromServer) => fromServer.json())
     .then((jsonFromServer) => runThisWithResultsFromServer(jsonFromServer))
     .catch((err) => {
