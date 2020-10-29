@@ -29,7 +29,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     animationEnabled: true,
     colorSet: 'customColorSet1',
     title: {
-      text: 'Change This Title'
+      text: 'Places To Eat Out In Future'
     },
     axisX: {
       interval: 1,
@@ -38,7 +38,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     axisY2:{
       interlacedColor: 'rgba(1,77,101,.2)',
       gridColor: 'rgba(1,77,101,.1)',
-      title: 'Places To Eat Out In Future',
+      title: 'Restaurants By Category',
       labelFontSize: 12,
       scaleBreaks:{
         type: 'wavy', 
