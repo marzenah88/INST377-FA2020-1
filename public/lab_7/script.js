@@ -1,15 +1,17 @@
 function convertRestaurantsToCategories(restaurantList) {
-  const cat_listist = [];
-  const categories = restaurantList.reduce(function(restaurant) => {
-    const checkCat = cat_list.find((category) => category.label === restaurant.category);
+  
+  const categories = restaurantList.reduce((cat_list, restaurant) => {
+    const checkCat = cat_list.find((cat) => cat.label === restaurant.category);
     if (!checkCat) {
       cat_list.push({y: 1, label: restaurant.category});
     } else {
       checkCat.y +=1;
     }
+    return checkCat;
+    return cat_list;
   }, []);
-  console.log(cat_list);
-  return cat_list;
+  console.log(categories);
+  return categories;
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
