@@ -1,3 +1,14 @@
+function sortFunction(a, b, key) {
+  if (a[key] < b[key]) {
+    return -1;
+  } if (a[key] > b[key]) {
+    return 1;
+  }
+  return 0;
+}
+
+
+
 function convertRestaurantsToCategories(restaurantList) {
   const listOfCat = [];
   const categories = restaurantList.reduce((cat_list, restaurant, index) => {
@@ -13,9 +24,8 @@ function convertRestaurantsToCategories(restaurantList) {
     }
     return cat_list;
   }, []);
-  const list = categories.sort((a, b) => {
-    return (b.y - a.y)
-  });
+  const list = categories.sort((a, b) => sortFunction(b, a, 'y'));
+ 
   console.log(list);
   return list;
 }
