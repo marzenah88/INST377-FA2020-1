@@ -14,9 +14,8 @@ function convertRestaurantsToCategories(restaurantList) {
   });
   const result =[];
   catList.forEach (cat => {
-    //const ind = catList.indexOf(cat)
     const count = counts[catList.indexOf(cat)]
-    result.push({y: count, category: cat})
+    result.push({y: count, label: cat})
   });
   return result;
 }
@@ -42,7 +41,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       labelFontSize: 12,
       scaleBreaks:{
         type: 'wavy', 
-        customBreaks: [{startValue: 40, endValue: 50}, {startValue: 90, endValue: 100}, {startValue: 150, endValue: 160}] 
+        customBreaks: [{startValue: 40, endValue: 50}, {startValue: 85, endValue: 100}, {startValue: 140, endValue: 175}] 
       }
          // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
