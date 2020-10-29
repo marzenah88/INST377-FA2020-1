@@ -11,13 +11,12 @@ function convertRestaurantsToCategories(restaurantList) {
       catList.push(newCat);
       counts.push(1);
     }
-  }
-  const result = [];
-  forEach (cat in catList) {
-    index = catList.indexOf(cat);
-    let count = counts[index];
-    result.push({y:count, cat});
-  }
+  };
+  catList.forEach (cat => {
+    index = catList.indexOf(cat)
+    let count = counts[index]
+    result.append({y:count, cat})
+  });
   return result;
 }
 
