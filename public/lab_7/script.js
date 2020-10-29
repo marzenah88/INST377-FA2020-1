@@ -1,18 +1,20 @@
 function convertRestaurantsToCategories(restaurantList) {
   const categories = restaurantList.reduce((cat_list, restaurant) => {
-    const checkCat = cat_list.find((cat) => cat.label === restaurant.category);
-    if (!checkCat) {
-      cat_list.push({y: 1, label: restaurant.category});
+    //const checkCat = cat_list.find((cat) => cat.label === restaurant.category);
+    cat_list.forEach(item => {
+      if (restaurant.category === item.label) {
+        checkCat.y +=1;
+        break;
     } else {
-      checkCat.y +=1;
-      return checkCat;
+      const newCat = {y: 1, label: restaurant.category}
+      return newCat;
     }
     return cat_list;
   }, []);
   console.log(categories);
   return categories;
 }
-
+cat_list.push();
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
   // set your chart configuration here!
   CanvasJS.addColorSet('customColorSet1', ['#F4FA0D', '#186ED6', '#E326ED', '#00DE19', '#EB201C', '#702319', '#255BFS', '#20F03C', '#EB23AE', '#4C6275', '#F00000']);
