@@ -4,8 +4,7 @@ function convertRestaurantsToCategories(restaurantList) {
     cat_list.forEach(item => {
       if (restaurant.category === item.label) {
         checkCat.y +=1;
-        break;
-    } else {
+      } else {
       const newCat = {y: 1, label: restaurant.category}
       return newCat;
     }
