@@ -10,8 +10,8 @@ function convertRestaurantsToCategories(restaurantList) {
     });
     return cat_list;
   }, []);
-  console.log(categories);
-  return categories;
+  console.log(cat_list);
+  return cat_list;
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
