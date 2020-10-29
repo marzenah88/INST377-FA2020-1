@@ -1,12 +1,12 @@
 function convertRestaurantsToCategories(restaurantList) {
   const categories = restaurantList.reduce((cat_list, restaurant) => {
-    //const checkCat = cat_list.find((cat) => cat.label === restaurant.category);
     cat_list.forEach(item => {
       if (restaurant.category === item.label) {
-        checkCat.y +=1;
+        checkCat.y += 1;
       } else {
-      const newCat = {y: 1, label: restaurant.category}
-      return newCat;
+        const newCat = {y: 1, label: restaurant.category};
+        return newCat;
+      }
     });
     return cat_list;
   }, []);
