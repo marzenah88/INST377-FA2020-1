@@ -1,16 +1,14 @@
 function convertRestaurantsToCategories(restaurantList) {
-  // process your restaurants here!
   const catList = [];
-  
   const groupedByCat = restaurantList.reduce((categList, item) => {
     if(!(item.category in categList)) {
       const newCat = item.category;
       catList.push(newCat);
-      groupedByCat.push({category: newCat, cunt: 1}); 
+      groupedByCat.push({cunt: 1, category: newCat }); 
     } else {
       groupedByCat.count +=1;
     }
-  }
+  });
   return groupedByCat;
 }
 
