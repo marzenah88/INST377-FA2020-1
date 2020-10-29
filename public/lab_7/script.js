@@ -41,10 +41,10 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       title: 'Restaurants By Category',
       labelFontSize: 12,
       scaleBreaks:{
+        color: 'gray',
         type: 'wavy', 
         customBreaks: [{startValue: 40, endValue: 50}, {startValue: 85, endValue: 100}, {startValue: 140, endValue: 175}] 
       }
-         // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
     data: [{
       type: 'bar',
