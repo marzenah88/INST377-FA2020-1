@@ -1,6 +1,6 @@
 function convertRestaurantsToCategories(restaurantList) {
   const catList = [];
-  const groupedByCat = restaurantList.reduce((categList, item) => {
+  const groupedByCat = restaurantList.reduce((catist, item) => {
     if(!(item.category in categList)) {
       const newCat = item.category;
       catList.push(newCat);
@@ -26,29 +26,16 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       interval: 1,
       labelFontSize: 12
     },
-    axisY2: {
+    axisY2:{
       interlacedColor: 'rgba(1,77,101,.2)',
       gridColor: 'rgba(1,77,101,.1)',
       title: 'Change This Title',
       labelFontSize: 12,
-      scaleBreaks: {type: 'wavy', customBreaks: [{
-				startValue: 0,
-				endValue: 50
-				},
-				{
-					startValue: 51,
-					endValue: 100
-        },
-        {
-					startValue: 101,
-					endValue: 150
-        },
-        {
-					startValue: 151,
-					endValue: 200
-        }
-
-      ]} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
+      scaleBreaks:{
+        type: 'wavy', 
+        customBreaks: [{startValue: 0, endValue: 50}, {startValue: 51, endValue: 100}, {startValue: 101, endValue: 150}, {startValue: 151, endValue: 200}] 
+      }
+         // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
     data: [{
       type: 'bar',
