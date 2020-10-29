@@ -1,27 +1,14 @@
 function convertRestaurantsToCategories(restaurantList) {
-  const counts = [];
-  const catList = [];
-  let index;
-  restaurantList.forEach(item => {
-    if (item.category in catList) {
-      index =  catList.indexOf(item.category);
-      counts[index] += 1;
+  const categories = restaurantlist.reduce((cat_list, restaurant) => {
+    const checkCat = cat_list.find((category) => category.label === item.category);
+    if (!checkCat) {
+      cat_list.push({label: item.category, y: 1});
     } else {
-      const newCat = item.category;
-      catList.push(newCat);
-      counts.push(1);
+      checkCat.y +=1;
     }
-  });
-  console.log(counts);
-  console.log(catList);
-  const result =[];
-  catList.forEach (cat => {
-    const count = counts[catList.indexOf(cat)]
-   
-    result.push({y: count, label: cat})
-  });
-  //console.log(result);
-  return result;
+    console.log(cat_list);
+    return cat_list;
+  }, []);
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
