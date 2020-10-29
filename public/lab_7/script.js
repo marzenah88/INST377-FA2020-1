@@ -35,7 +35,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       text: 'Places To Eat Out In Future'
     },
     axisX: {
-      interval: 1,
+      interval: 10,
       labelFontSize: 12
     },
     axisY2:{
