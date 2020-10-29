@@ -1,28 +1,24 @@
-const { each } = require("cypress/types/bluebird");
-const { forEach } = require("cypress/types/lodash");
-
 function convertRestaurantsToCategories(restaurantList) {
-  
   const counts = [];
   const catList = [];
-  let index
+  let index;
   forEach (item in restaurantList){
-    if (item.category in catList) {
+    if (item.category in catList){
        index =  catList.indexOf(item.category);
        counts[index] += 1;
-    } else {
+    }else{
       const newCat = item.category;
       catList.push(newCat);
       counts.push(1);
     }
   }
-  const result = [];
+  const list = [];
   forEach(cat in catList) {
     index = catList.indexOf(cat);
-    const count = counts[index];
-    result.push({y:count, cat});
+    let count = counts[index];
+    list.push({y:count, cat});
   }
-  return result
+  return list;
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
