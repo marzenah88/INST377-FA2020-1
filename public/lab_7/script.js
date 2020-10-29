@@ -46,7 +46,11 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       scaleBreaks:{
         color: 'gray',
         type: 'wavy', 
-        customBreaks: [{startValue: 40, endValue: 50}, {startValue: 85, endValue: 100}, {startValue: 140, endValue: 175}] 
+        customBreaks: [
+          {color: 'gray',startValue: 40, endValue: 50}, 
+          {color: 'gray', startValue: 85, endValue: 100}, 
+          {color: 'gray',startValue: 140, endValue: 175}
+        ] 
       }
     },
     data: [{
