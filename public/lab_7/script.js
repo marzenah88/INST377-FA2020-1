@@ -12,13 +12,13 @@ function convertRestaurantsToCategories(restaurantList) {
       counts.push(1);
     }
   };
-  const ilist = [];
+  const result = [];
   forEach (cat in catList) {
     index = catList.indexOf(cat);
     let count = counts[index];
-    list.push({y:count, cat});
+    result.push({y:count, cat});
   }
-  return list;
+  return result;
 }
 
 function makeYourOptionsObject(datapointsFromRestaurantsList) {
