@@ -2,16 +2,16 @@ function convertRestaurantsToCategories(restaurantList) {
   const counts = [];
   const catList = [];
   let index;
-  forEach (item in restaurantList){
-    if (item.category in catList){
+  restaurantList.forEach(item => {
+    if (item.category in catList) {
        index =  catList.indexOf(item.category);
        counts[index] += 1;
-    }else{
+    } else {
       const newCat = item.category;
       catList.push(newCat);
       counts.push(1);
     }
-  }
+  };
   const list = [];
   forEach(cat in catList) {
     index = catList.indexOf(cat);
