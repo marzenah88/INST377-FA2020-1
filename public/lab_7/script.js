@@ -14,9 +14,9 @@ function convertRestaurantsToCategories(restaurantList) {
   });
   const result =[];
   catList.forEach (cat => {
-    let ind = catList.indexOf(cat)
-    let count = counts[ind]
-    result.append({y:count, category: cat})
+    //const ind = catList.indexOf(cat)
+    const count = counts[catList.indexOf(cat)]
+    result.push({y: count, category: cat})
   });
   return result;
 }
