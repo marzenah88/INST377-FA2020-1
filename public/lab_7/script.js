@@ -1,11 +1,4 @@
-function sortFunction(a, b, key) {
-  if (a[key] < b[key]) {
-    return -1;
-  } if (a[key] > b[key]) {
-    return 1;
-  }
-  return 0;
-}
+
 function convertRestaurantsToCategories(restaurantList) {
   const categories = restaurantList.reduce((cat_list, restaurant, index) => {
     const findCat = cat_list.find((findItem) => findItem.label === restaurant.category);
