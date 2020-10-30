@@ -41,7 +41,7 @@ function makeYourOptionsObject(listOfCatObjects) {
       gridColor: 'rgba(1,77,101,.1)',
       title: 'Restaurants By Category',
       labelFontSize: 12,
-      viewportMinimum: 200,
+      viewportMaximum: 200,
       scaleBreaks:{
         color: 'gray',
         type: 'wavy', 
