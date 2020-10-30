@@ -15,7 +15,7 @@ function convertRestaurantsToCategories(restaurantList) {
       index = cat_list.indexOf(findCat);
       cat_list[index].y += 1;
     }
-  const final_list = cat_list.reduce()
+
     return cat_list;
   }, []);
 //const list = categories.sort((a, b) => sortFunction(b, a, 'y'));
