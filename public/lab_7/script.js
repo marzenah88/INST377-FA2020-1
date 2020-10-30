@@ -6,32 +6,24 @@ function sortFunction(a, b, key) {
   }
   return 0;
 }
-
-
-
 function convertRestaurantsToCategories(restaurantList) {
-  const listOfCat = [];
-  const categories = restaurantList.reduce((cat_list, restaurant, index) => {
-    let cat = restaurant.category;
-    if (cat in listOfCat) {
-      index = listOfCat.indexOf(cat);
-      cat_list[index].y += 1;
+  const categories = restaurantlist.reduce((cat_list, restaurant, index) => {
+    const findCat = groupOf100.find((findItem) => findItem.label === restaurant.category);
+    if (!findCat) {
+      cat_list.push({y: 1, label: restaurant.category});
     } else {
-      const nextCat = cat;
-      const newCat = {y: 1, label: nextCat};
-      listOfCat.push(nextCat);
-      return newCat;
+      index = cat_list.indexOf(findCat);
+      cat_list[index].y += 1;
     }
     return cat_list;
   }, []);
-  const list = categories.sort((a, b) => sortFunction(b, a, 'y'));
- 
-  console.log(list);
-  return list;
+//const list = categories.sort((a, b) => sortFunction(b, a, 'y'));
+
+  console.log(categories);
+  return categories;
 }
 
-
-function makeYourOptionsObject(datapointsFromRestaurantsList) {
+function makeYourOptionsObject(listOfCatObjects) {
   // set your chart configuration here!
   CanvasJS.addColorSet('customColorSet1', ['#F4FA0D', '#186ED6', '#E326ED', '#00DE19', '#EB201C', '#702319', '#255BFS', '#20F03C', '#EB23AE', '#4C6275', '#F00000']);
 
@@ -64,7 +56,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
       type: 'bar',
       name: 'restaurants',
       axisYType: 'secondary',
-      dataPoints: datapointsFromRestaurantsList
+      dataPoints: listOfCatObjects
     }]
   };
 }
