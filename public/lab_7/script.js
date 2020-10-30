@@ -7,7 +7,7 @@ function sortFunction(a, b, key) {
   return 0;
 }
 function convertRestaurantsToCategories(restaurantList) {
-  const categories = restaurantlist.reduce((cat_list, restaurant, index) => {
+  const categories = restaurantList.reduce((cat_list, restaurant, index) => {
     const findCat = groupOf100.find((findItem) => findItem.label === restaurant.category);
     if (!findCat) {
       cat_list.push({y: 1, label: restaurant.category});
