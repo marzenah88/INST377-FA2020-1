@@ -18,8 +18,6 @@ function convertRestaurantsToCategories(restaurantList) {
 
     return cat_list;
   }, []);
-//const list = categories.sort((a, b) => sortFunction(b, a, 'y'));
-
   console.log(categories);
   return categories;
 }
