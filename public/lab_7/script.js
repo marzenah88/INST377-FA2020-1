@@ -15,6 +15,7 @@ function convertRestaurantsToCategories(restaurantList) {
       index = cat_list.indexOf(findCat);
       cat_list[index].y += 1;
     }
+  const final_list = cat_list.reduce()
     return cat_list;
   }, []);
 //const list = categories.sort((a, b) => sortFunction(b, a, 'y'));
@@ -34,7 +35,7 @@ function makeYourOptionsObject(listOfCatObjects) {
       text: 'Places To Eat Out In Future'
     },
     axisX: {
-      interval: 10,
+      interval: 1,
       labelFontSize: 12
     },
     axisY2:{
