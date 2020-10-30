@@ -8,7 +8,7 @@ function sortFunction(a, b, key) {
 }
 function convertRestaurantsToCategories(restaurantList) {
   const categories = restaurantList.reduce((cat_list, restaurant, index) => {
-    const findCat = restaurantList.find((findItem) => findItem.label === restaurant.category);
+    const findCat = cat_list.find((findItem) => findItem.label === restaurant.category);
     if (!findCat) {
       cat_list.push({y: 1, label: restaurant.category});
     } else {
