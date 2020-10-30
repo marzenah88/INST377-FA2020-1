@@ -8,7 +8,6 @@ function convertRestaurantsToCategories(restaurantList) {
       index = cat_list.indexOf(findCat);
       cat_list[index].y += 1;
     }
-
     return cat_list;
   }, []);
   console.log(categories);
