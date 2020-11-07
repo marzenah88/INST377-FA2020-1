@@ -1,3 +1,8 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
     background: #3d009e;
     font-size: 1.0em;
@@ -59,4 +64,4 @@ body {
       padding: 6px 14px;
       border-radius: 30px;
   }
-  
+ 
