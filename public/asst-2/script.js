@@ -13,7 +13,7 @@ function runDataFromServer(jsonFromServer) {
 
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); 
-  const form = $(e.target).serializeArray();
+  const form = (e.target).serializeArray();
   const venues = []; 
   fetch('/api', {
     method: 'POST',
