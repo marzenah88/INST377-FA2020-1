@@ -8,7 +8,7 @@ function narrowDataScope (data) {
   
 function getResults(jsonFromServer) {
     console.log('jsonFromServer', jsonFromServer);
-    
+}
    /* const narrowData = narrowDataScope(jsonFromServer);
     const matchedResults = matchText(input_text, narrowData);
     const options = makeYourOptionsObject(reorganizedData);
@@ -21,10 +21,9 @@ function getResults(jsonFromServer) {
         return venue.
     })
     */
-}
 
   
-/*document.body.addEventListener('submit', async (e) => {
+document.body.addEventListener('submit', async (e) => {
     e.preventDefault(); 
     const form = $(e.target).serializeArray();
     fetch('/api', {
@@ -36,7 +35,7 @@ function getResults(jsonFromServer) {
     })
       .then((fromServer) => fromServer.json())
       .then((jsonFromServer) => getResults(jsonFromServer))   
-    console.log(err);
-});
-
-  */
+      .catch((err) => {
+        console.log(err);
+      });
+  });
