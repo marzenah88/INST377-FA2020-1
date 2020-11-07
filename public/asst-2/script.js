@@ -4,6 +4,9 @@ function shringItemData(restaurantList) {
   return categories;
 }
 function runDataFromServer(jsonFromServer) {
+  console.log('jsonFromServer', jsonFromServer);
+  sessionStorage.setItem('restaurantList', JSON.stringify(jsonFromServer));
+
   const matchResults = shringItemData(jsonFromServer);
   console.log(matchResults);
 }
