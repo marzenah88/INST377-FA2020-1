@@ -36,7 +36,7 @@ function findMatches(word, venues) {
   });
 }
 function displayMatches() {
-  const matchArray = findMathes(this.value, venues);
+  const matchArray = findMatches(this.value, venues);
   console.log(matchArray);
 }
 const searchInput = document.querySelector('.searchbar');
