@@ -14,3 +14,7 @@ document.body.addEventListener('submit', async (e) => {
       console.log(err);
     });
 });
+function getResults(data) {
+  console.log('jsonFromServer', jsonFromServer);
+  return 1;
+}
