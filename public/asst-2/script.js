@@ -23,12 +23,20 @@ document.body.addEventListener('submit', async (e) => {
     body: JSON.stringify(form)
   })
     .then((fromServer) => fromServer.json())
-    .then((jsonFromServer) => venues(...jsonFromServer))
-    .then((venues))
+    .then((jsonFromServer) => venues.push(...jsonFromServer))
+    .then((venues) => matching(venues));
     .catch((err) => {
       console.log(err);
     });
 });
+function matching(venues) {
+  const searchInput = document.querySelector('.searchbar');
+  const suggestions = document.querySelector('.suggestions');
+  
+  const results = findMatches(searchInput, venues);
+
+}
+
 function findMatches(word, venues) {
   return venues.filter (venue => {
     const regex = new RegExp(word, 'gi');
@@ -39,7 +47,3 @@ function displayMatches() {
   const matchArray = findMatches(this.value, venues);
   console.log(matchArray);
 }
-const searchInput = document.querySelector('.searchbar');
-const suggestions = document.querySelector('.suggestions');
-
-searchInput.addEventListener('change', displayMatches);
