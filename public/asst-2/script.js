@@ -1,13 +1,11 @@
 function shringItemData(restaurantList) {
   const categories = restaurantList.map(x => [x.name, x.address_line1, x.address_line2, x.city, x.state, x.zip]);
-  console.log(categories);
+  
   return categories;
 }
 function runDataFromServer(jsonFromServer) {
-  console.log('jsonFromServer', jsonFromServer);
-  //sessionStorage.setItem('restaurantList', JSON.stringify(jsonFromServer)); 
   const matchResults = shringItemData(jsonFromServer);
-  
+  console.log(matchResults);
 }
 
 document.body.addEventListener('submit', async (e) => {
