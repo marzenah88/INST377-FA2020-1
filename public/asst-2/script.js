@@ -24,7 +24,7 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((jsonFromServer) => venues.push(...jsonFromServer))
-    .then((venues) => matching(venues));
+    .then((venues) => matching(venues))
     .catch((err) => {
       console.log(err);
     });
