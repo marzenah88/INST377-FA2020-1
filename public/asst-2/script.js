@@ -14,6 +14,7 @@ function runDataFromServer(jsonFromServer) {
 document.body.addEventListener('submit', async (e) => {
   e.preventDefault(); 
   const form = $(e.target).serializeArray();
+  const venues = []; 
   fetch('/api', {
     method: 'POST',
     headers: {
@@ -22,8 +23,23 @@ document.body.addEventListener('submit', async (e) => {
     body: JSON.stringify(form)
   })
     .then((fromServer) => fromServer.json())
-    .then((jsonFromServer) => console.log(jsonFromServer))
+    .then((jsonFromServer) => venues(...jsonFromServer))
+    .then((venues))
     .catch((err) => {
       console.log(err);
     });
 });
+function findMatches(word, venues) {
+  return venues.filter (venue => {
+    const regex = new RegExp(word, 'gi');
+    return venues.name.match(regex) || venues.city.match(regex)
+  });
+}
+function displayMatches() {
+  const matchArray = findMathes(this.value, venues);
+  console.log(matchArray);
+}
+const searchInput = document.querySelector('.searchbar');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
