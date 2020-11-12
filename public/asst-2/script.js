@@ -3,8 +3,8 @@ const lab_data = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json
 const venues = [];
 
 fetch(lab_data)
-  .then(blob => blob.json())
-  .then(data => venues.push(...data));
+  .then(lab_data => lab_data.json())
+  .then(dataset => venues.push(...dataset));
 
 function findMatches(wordsToMatch, venues) {
   return venues.filter(venue => {
