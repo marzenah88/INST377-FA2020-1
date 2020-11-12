@@ -48,11 +48,12 @@ h1 {
   }
 .textinput {
     margin: 6px 50px;
-    padding: 25 15px;
+    padding: 15 25px;
     border-radius: 600px;
     line-height: 1.5;
     min-width: 500px;
-    font-size: 22px;
+    font-family: 'Eczar', serif;
+    font-size: 30px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -96,6 +97,7 @@ li {
   text-transform: capitalize;
 }
 .inspectionResults, .establishmentType {
+  font-family: 'Eczar', serif;
   font-style: oblique;
   color: rgb(93, 125, 145);
 }
