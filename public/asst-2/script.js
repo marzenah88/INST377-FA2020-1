@@ -24,9 +24,9 @@ function displayMatches() {
     const venueCity = venue.city.replace(regex, `<span class="highlightme">${this.value}</span>`);
     return `
       <li>
-        <span class="name">${venueName}, ${' '} </span>
-        <span class="cityAndZip">  ${venueCity},  ${'MD '}${venue.zip}, ${' '} </span>
-        <span class="establishmentType"> ${venue.category}, ${' '} </span>
+        <span class="name">${venueName}, ${' \n'} </span>
+        <span class="cityAndZip">  ${venueCity},  ${'MD '}${venue.zip}, ${' \n'} </span>
+        <span class="establishmentType"> ${venue.category}, ${' \n'} </span>
         <span class="inspectionResults"> ${venue.inspection_results}</span>
       </li>
     `;
