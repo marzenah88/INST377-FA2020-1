@@ -83,6 +83,12 @@ li {
   flex-wrap: wrap;
   border-radius: 16px;
 }
-.name, .cityAndZip {
+.name {
+  text-transform: uppercase;
+}
+.cityAndZip {
   text-transform: capitalize;
+}
+.inspectionResults {
+  font-style: oblique;
 }
