@@ -5,11 +5,11 @@ html {
 body {
   background: linear-gradient(rgb(7, 199, 224) 35%, rgb(11, 54, 248) 100%);
   background-attachment: fixed;
-  font-size: 1.0em;
+ /* font-size: 1.0em;*/
   line-height: 1.6;
   font-weight: 400;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #f72307;
+  /*color: #f72307;*/
 }
 .wrapper {
   display: flex;
@@ -28,12 +28,12 @@ body {
   margin: 0;
   margin-bottom: 5px;
   padding: 4px 8px;
-  border-radius: 5px;
-  border-color: rgb(19, 18, 1); 
+  /*border-radius: 5px;
+  border-color: rgb(19, 18, 1); */
  }
 h1 {
     margin: 20px 50px;
-    padding: 0px 20px;
+    padding: 5px 20px;
     min-height: 75px;
     background-color: rgb(49, 85, 245);
     color: rgb(207, 215, 216);
@@ -65,10 +65,7 @@ h1 {
 }
 .searchbar {
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-width: 5px;
-  border-color: black;
 }
 .highlightme { 
   background-color:rgb(223, 219, 8); 
