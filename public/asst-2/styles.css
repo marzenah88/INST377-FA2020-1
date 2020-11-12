@@ -94,9 +94,9 @@ li {
   font-size: 1.0em;
   border-radius: 16px;
 }
-.textinput[::placeholder] {
+.textinput[type='text']::placeholder {   
+  text-align: right;
   color: rgb(176, 211, 233);
-  align-self: center;
 }
 .name {
   text-transform: uppercase;
