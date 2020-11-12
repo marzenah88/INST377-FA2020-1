@@ -58,6 +58,7 @@ h1 {
     font-size: 28px;
     flex-direction: row;
     align-items: stretch;
+    align-content: center;
     justify-content: center;
     font-style: oblique;
     color: rgb(93, 125, 145);
