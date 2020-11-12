@@ -28,7 +28,8 @@ body {
   margin: 0;
   margin-bottom: 5px;
   padding: 4px 8px;
-  border-radius: 10px;
+  border-radius: 5px;
+  border-color: rgb(19, 18, 1); 
  }
 h1 {
     margin: 20px 50px;
@@ -44,7 +45,7 @@ h1 {
     text-transform: capitalize;
     flex-wrap: nowrap;
     border-radius: 16px;
-    border-color: rgb(19, 18, 1); 
+   
   }
 .textinput {
     margin: 6px 50px;
