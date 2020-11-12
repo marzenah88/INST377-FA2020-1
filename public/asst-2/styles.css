@@ -64,7 +64,10 @@ h1 {
 }
 .searchbar {
   display: flex;
+  flex-direction: row;
+  align-content: center;
   justify-content: center;
+  text-transform: initial;
 }
 .highlightme { 
   background-color:rgb(223, 219, 8); 
