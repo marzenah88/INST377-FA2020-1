@@ -53,15 +53,14 @@ h1 {
     padding-top: 15px;
     padding-bottom: 15px;
     border-radius: 600px;
-    line-height: 1.5;
+    line-height: 1.2;
     min-width: 500px;
     font-size: 28px;
     flex-direction: row;
     align-items: stretch;
     align-content: center;
     justify-content: center;
-    font-style: oblique;
-    color: rgb(93, 125, 145);
+    color: rgb(140, 182, 209);
 }
 .searchbar {
   display: flex;
