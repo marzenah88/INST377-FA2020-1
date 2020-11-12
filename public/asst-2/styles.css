@@ -80,7 +80,6 @@ li {
   justify-content: flex-start;
   font-weight: bold;
   font-size: 1.0em;
-  text-transform: capitalize;
   flex-wrap: wrap;
   border-radius: 16px;
 }
