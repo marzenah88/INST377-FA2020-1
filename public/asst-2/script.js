@@ -16,8 +16,8 @@ function displayMatches() {
   const matchArray = findMatches(this.value, venues);
   const html = matchArray.map(venue => {
     const regex = new RegExp(this.value, 'gi');
-    const venueName = venue.name.replace(regex, `<span class="highlightme">${this.value}</span>`);
-    const venueCity = venue.city.replace(regex, `<span class="highlightme">${this.value}</span>`);
+    const venueName = venue.name.replace(regex.ignoreCase, `<span class="highlightme">${this.value}</span>`);
+    const venueCity = venue.city.replace(regex.ignoreCase, `<span class="highlightme">${this.value}</span>`);
     return `
       <li>
         <span class="name">${venueName},  </span>
