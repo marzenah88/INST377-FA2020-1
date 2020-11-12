@@ -25,8 +25,7 @@ function displayMatches() {
     return `
       <li>
         <span class="name">${venueName},  ${' \n'} </span>
-        <span class="cityAndZip">  ${venueCity},  {'MD '}${venue.zip},  ${' \n'} </span>
-
+        <span class="cityAndZip">  ${venueCity},  $oo{'MD '}${venue.zip},  ${' \n'} </span>
         <span class="establishmentType"> ${venue.category},  ${' \n'} </span>
         <span class="inspectionResults"> ${venue.inspection_results}</span>
       </li>
