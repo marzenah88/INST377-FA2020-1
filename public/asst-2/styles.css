@@ -83,6 +83,6 @@ li {
   flex-wrap: wrap;
   border-radius: 16px;
 }
-.name {
+.name, .cityAndZip {
   text-transform: capitalize;
 }
