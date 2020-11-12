@@ -44,6 +44,7 @@ h1 {
     text-transform: capitalize;
     flex-wrap: nowrap;
     border-radius: 16px;
+    border-color: rgb(223, 219, 8); 
   }
 .textinput {
     margin: 6px 50px;
