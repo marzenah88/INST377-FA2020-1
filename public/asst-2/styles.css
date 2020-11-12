@@ -96,6 +96,7 @@ li {
 }
 .textinput[::placeholder] {
   color: rgb(176, 211, 233);
+  align-self: center;
 }
 .name {
   text-transform: uppercase;
