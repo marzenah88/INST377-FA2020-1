@@ -48,8 +48,9 @@ h1 {
   }
 .textinput {
     margin: 6px 50px;
-    padding-left: 35px;
-    padding: 20px;
+    padding-left: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 600px;
     line-height: 1.5;
     min-width: 500px;
