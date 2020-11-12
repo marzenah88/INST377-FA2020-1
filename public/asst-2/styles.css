@@ -79,7 +79,7 @@ li {
   justify-content: space-between;
   font-weight: bold;
   font-size: 1.0em;
-  text-transform: uppercase;
+  text-transform: capitalize;
   flex-wrap: nowrap;
   border-radius: 16px;
 }

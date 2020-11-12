@@ -25,9 +25,9 @@ function displayMatches() {
     return `
       <li>
         <span class="name">${venueName},  </span>
-        <span class="cityAndZip"> ${venueCity},  ${'MD '}${venue.zip},  </span>
-        <span class="establishmentType">${venue.category}, </span>
-        <span class="inspectionResults">${venue.inspection_results}</span>
+        <span class="cityAndZip">  ${venueCity},  ${'MD '}${venue.zip},  </span>
+        <span class="establishmentType"> ${venue.category}, </span>
+        <span class="inspectionResults"> ${venue.inspection_results}</span>
       </li>
     `;
   }).join('');
