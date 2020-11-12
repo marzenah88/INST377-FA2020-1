@@ -33,8 +33,6 @@ function displayMatches() {
   }).join('');
   suggestions.innerHTML = html;
 }
-
-/*wesbos' input had a class of 'search' but ours is textinput */
 const searchInput = document.querySelector('.textinput');
 const suggestions = document.querySelector('.suggestions');
 searchInput.addEventListener('input', displayMatches);
