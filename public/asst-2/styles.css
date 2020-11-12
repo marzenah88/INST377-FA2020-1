@@ -60,7 +60,7 @@ h1 {
     align-items: stretch;
     align-content: center;
     justify-content: center;
-    color: rgb(176, 211, 233);
+    color: rgb(101, 125, 139);
 }
 .searchbar {
   display: flex;
@@ -93,6 +93,9 @@ li {
   font-weight: bold;
   font-size: 1.0em;
   border-radius: 16px;
+}
+.textinput[::placeholder] {
+  color: rgb(176, 211, 233);
 }
 .name {
   text-transform: uppercase;
