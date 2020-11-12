@@ -84,12 +84,12 @@ li {
   background-color: rgb(231, 231, 231);
   color: rgb(2, 0, 107);
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   font-weight: bold;
   font-size: 1.0em;
-  flex-wrap: wrap;
   border-radius: 16px;
 }
 .name {
