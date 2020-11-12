@@ -76,10 +76,10 @@ li {
   color: rgb(2, 0, 107);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-weight: bold;
   font-size: 1.0em;
   text-transform: capitalize;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   border-radius: 16px;
 }
