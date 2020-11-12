@@ -66,6 +66,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-width: 5px;
+  border-color: black;
 }
 .highlightme { 
   background-color:rgb(223, 219, 8); 
