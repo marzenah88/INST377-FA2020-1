@@ -16,8 +16,8 @@ function displayMatches() {
   const matchArray = findMatches(this.value, venues);
   const html = matchArray.map(venue => {
     const regex = new RegExp(this.value, 'g');
-    const venueName = venue.name.replace(regex, `<span class="highlightme">${regex.source}</span>`);
-    const venueCity = venue.city.replace(regex, `<span class="highlightme">${regex.source}</span>`);
+    const venueName = venue.name.replace(regex, `<span class="highlightme">${this.value}</span>`);
+    const venueCity = venue.city.replace(regex, `<span class="highlightme">${this.value}</span>`);
     return `
       <li>
         <span class="name">${venueName},  </span>
@@ -31,4 +31,4 @@ function displayMatches() {
 }
 const searchInput = document.querySelector('.textinput');
 const suggestions = document.querySelector('.suggestions');
-searchInput.addEventListener('keyup', displayMatches);
+searchInput.addEventListener('change', displayMatches);
