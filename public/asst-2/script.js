@@ -10,7 +10,7 @@ function findMatches(wordsToMatch, venues) {
   return venues.filter(venue => {
     const regex = new RegExp(wordsToMatch, 'gi');
     if (!(regex === null || venue.name === null || venue.city === null)) {
-      return venue.name.match(regex) || venue.establishmentType.match(regex);
+      return venue.name.match(regex);  /* || venue.establishmentType.match(regex); */
     }
   });
 }
@@ -19,7 +19,7 @@ function displayMatches() {
   const html = matchArray.map(venue => {
     const regex = new RegExp(this.value, 'gi');
     const venueName = venue.name.replace(regex, `<span class="highlightme">${this.value}</span>`);
-    const venueCity = venue.venue.establishmentType.replace(regex, `<span class="highlightme">${this.value}</span>`);
+   /* const venueCity = venue.venue.establishmentType.replace(regex, `<span class="highlightme">${this.value}</span>`); */
     return `
       <li>
         <span class="name">${venueName.toLowerCase()},  </span>
