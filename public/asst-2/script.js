@@ -10,9 +10,8 @@ function findMatches(wordsToMatch, venues) {
   return venues.filter(venue => {
     const regex = new RegExp(wordsToMatch, 'gi');
     if (!(regex === null || venue.name === null || venue.city === null)) {
-      return venue.name.match(regex);
+      return venue.name.match(regex) || venue.city.match(regex);
     }
-    /*|| venue.city.match(regex) */
   });
 }
 function displayMatches() {
