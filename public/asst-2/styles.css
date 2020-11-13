@@ -95,6 +95,7 @@ li {
   border-radius: 16px;
 }
 .textinput[type='text']::placeholder {   
+  font-size: 20px;
   text-align: center;
   color: rgb(176, 211, 233);
 }
