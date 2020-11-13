@@ -11,7 +11,7 @@ function findMatches(wordsToMatch, venues) {
   return venues.filter(venue => {
     const regex = new RegExp(wordsToMatch, 'gi');
     if (!(regex === null || venue.name === null || venue.city === null)) {
-      return venue.name.match(regex) || venue.zip.match(regex) || venue.inspection_results.match(regex); 
+      return venue.name.match(regex) || venue.zip.match(regex) || venue.category.match(regex); 
     }
   });
 }
@@ -21,12 +21,12 @@ function displayMatches() {
     const regex = new RegExp(this.value, 'gi');
     const venueName = venue.name.replace(regex, `<span class="highlightme">${this.value}</span>`);
     const venueZip = venue.zip.replace(regex, `<span class="highlightme">${this.value}</span>`); 
-    const venueInspections = venue.inspection_results.replace(regex, `<span class="highlightme">${this.value}</span>`); 
+    const venueCategory = venue.category.replace(regex, `<span class="highlightme">${this.value}</span>`); 
     return `
       <li>
         <span class="name">${venueName.toLowerCase()},  </span>
         <span class="stateAndZip"> ${'MD '}${venueZip},  </span>
-        <span class="establishmentType">${'category: '} ${venue.category}  </span>
+        <span class="establishmentType">${'Category: '} ${venueCategory.toLowerCase()}  </span>
         <span class="inspectionResults">${'Inspection results: '} ${venueInspections}</span>
       </li>
     `;
