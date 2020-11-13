@@ -58,11 +58,14 @@ h1 {
     color: rgb(101, 125, 139);
 }
 .searchbar {
+  /*min-width: 550px; */
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   text-transform: initial;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .highlightme { 
   background-color:rgb(223, 219, 8); 
