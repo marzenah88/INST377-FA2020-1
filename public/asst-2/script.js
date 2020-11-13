@@ -27,7 +27,7 @@ function displayMatches() {
         <span class="name">${venueName.toLowerCase()},  </span>
         <span class="stateAndZip"> ${'MD '}${venueZip},  </span>
         <span class="establishmentType">${'Category: '} ${venueCategory.toLowerCase()}  </span>
-        <span class="inspectionResults">${'Inspection results: '} ${venueInspections}</span>
+        <span class="inspectionResults">${'Inspection results: '} ${venues.inspection_results}</span>
       </li>
     `;
   }).join('');
