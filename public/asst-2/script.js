@@ -9,7 +9,11 @@ fetch(pg_data)
 function findMatches(wordsToMatch, venues) {
   return venues.filter(venue => {
     const regex = new RegExp(wordsToMatch, 'gi');
-    return venue.name.match(regex) || venue.city.match(regex)
+    if (!regex) {
+      return
+    } else {
+      return venue.name.match(regex) || venue.city.match(regex)
+    }
   });
 }
 function displayMatches() {
