@@ -60,7 +60,7 @@ h1 {
     color: rgb(101, 125, 139);
 }
 .searchbar {
-  /*min-width: 550px; */
+  min-width: 650px; 
   display: flex;
   flex-direction: row;
   align-content: center;
