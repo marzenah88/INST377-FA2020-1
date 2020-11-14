@@ -5,11 +5,9 @@ html {
 body {
   background: linear-gradient(rgb(7, 199, 224) 35%, rgb(11, 54, 248) 100%);
   background-attachment: fixed;
- /* font-size: 1.0em;*/
   line-height: 1.6;
   font-weight: 400;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*color: #f72307;*/
 }
 .wrapper {
   display: flex;
@@ -28,36 +26,35 @@ body {
   margin: 0;
   margin-bottom: 5px;
   padding: 4px 8px;
-  /*border-radius: 5px;
-  border-color: rgb(19, 18, 1); */
- }
+  border-radius: 5px;
+}
 h1 {
-    margin: 20px 50px;
-    padding: 5px 20px;
-    min-height: 75px;
-    background-color: rgb(49, 85, 245);
-    color: rgb(207, 215, 216);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-transform: capitalize;
-    flex-wrap: nowrap;
-    border-radius: 16px;
+  margin: 20px 50px;
+  padding: 5px 20px;
+  min-height: 75px;
+  background-color: rgb(49, 85, 245);
+  color: rgb(207, 215, 216);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  flex-wrap: nowrap;
+  border-radius: 16px;
 }
 .textinput {
-    margin: 6px 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 15px;
-    padding-left: 15px;
-    border-radius: 600px;
-    line-height: 1;
-    min-width: 580px;
-    font-size: 25px;
-    text-align: center;
-    color: rgb(101, 125, 139);
+  margin: 6px 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 600px;
+  line-height: 1;
+  min-width: 580px;
+  font-size: 25px;
+  text-align: center;
+  color: rgb(101, 125, 139);
 }
 .searchbar {
   min-width: 650px; 
