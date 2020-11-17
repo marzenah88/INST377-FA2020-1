@@ -1,13 +1,14 @@
 // These are our required libraries to make the server work.
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
+
 import express from 'express';
 import dotenv from 'dotenv';
 import countries from './public/lab_6/countries.js';
 import fetch from 'node-fetch';
 
 dotenv.config();
-
+const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const port = process.env.PORT || 3000;
 
