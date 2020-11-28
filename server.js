@@ -8,7 +8,7 @@ import countries from './public/lab_6/countries.js';
 import fetch from 'node-fetch';
 
 dotenv.config();
-const sqlite3 = require('sqlite3').verbose();
+
 const app = express();
 const port = process.env.PORT || 3000;
 
