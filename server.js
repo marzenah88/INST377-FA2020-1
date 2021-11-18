@@ -37,7 +37,17 @@ app.route('/api')
     console.log('data from fetch', json);
     res.json(json);
   });
-
+app.route('/apiLab4')
+  .get(async (req, res) => {
+    console.log('GET request detected');
+    
+    res.send("We see the request but don't know what to do with it");
+  })
+  .post(async (req, res) => {
+    console.log('POST request detected');
+    console.log('Form data in res.body', req.body);
+    res.send("Thank you! we received your form submittion");
+  });
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
 });
